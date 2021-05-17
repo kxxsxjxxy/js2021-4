@@ -2,37 +2,36 @@
 ---
 
 ## [5월 11일]
-<Date 객체 생성 방법> </br>
-new Date() : 현재 시간으로 Date 객체를 생성합니다. </br>
-new Date((유닉스타임)) : 유닉스 타임으로 Date 객체를 생성합니다. </br>
-new Date(<시간 문자열>) : 문자열로 Date 객체를 생성합니다. </br>
-new Date(<년>,<월-1>,<일>,<시간>,<분>,<초>,<밀리초>) :시간요소를 기반으로 Date 객체를 생성 </br>
+**Date 객체 생성 방법**
+>- new Date() : 현재 시간으로 Date 객체를 생성합니다.
+>-new Date((유닉스타임)) : 유닉스 타임으로 Date 객체를 생성합니다.
+>-new Date(<시간 문자열>) : 문자열로 Date 객체를 생성합니다.
+>-new Date(<년>,<월-1>,<일>,<시간>,<분>,<초>,<밀리초>) :시간요소를 기반으로 Date 객체를 생성
 
--Month를 나타내는 '월'은 0부터 시작, </br>
-  0 -> 1월, 11 -> 12월 </br>
+Month를 나타내는 '월'은 0부터 시작,
+0 -> 1월, 11 -> 12월
 
+**Array 객체의 기본 메소드**
 
-<Array 객체의 기본 메소드> </br>
-- 대부분 파괴적 메소드로 자기 자신을 변경. </br>
-- 예 : concat(), join(), pop()*, push()*, reverse()*, slice() ....등등 </br>
+>- 대부분 파괴적 메소드로 자기 자신을 변경.
+예 : concat(), join(), pop(), push(), reverse()*, slice() ....등등
+>>- 예제 7-7
+let now = new Date();
+let before = new Date('December 9, 2020');
 
-//예제 7-7 </br>
-let now = new Date(); </br>
-let before = new Date('December 9, 2020'); </br>
+let interval = now.getTime() -before.getTime();
+console.log(interval);
 
-let interval = now.getTime() -before.getTime(); </br>
-console.log(interval); </br>
+interval = Math.floor(interval / (10006060*24));
+console.log(interval);
 
-interval = Math.floor(interval / (1000*60*60*24)); </br>
-console.log(interval); </br>
+**JSON 객체**
 
-<JSON 객체> </br>
-- 자바스크립트 객체를 사용한 데이터 표현 방법 </br>
-*제약사항  </br>
-1.문자열은 큰따옴표로 만듦. </br>
-2.모든 키는 큰따옴표로 감싸야 함 </br>
-3.숫자, 문자열, 불 자료형만 사용 가능. </br>
-
+>- 자바스크립트 객체를 사용한 데이터 표현 방법
+>>- *제약사항
+1.문자열은 큰따옴표로 만듦.
+2.모든 키는 큰따옴표로 감싸야 함
+3.숫자, 문자열, 불 자료형만 사용 가능.
 ## [5월 4일]
 **기본 자료형과 객체 자료형의 차이**
 >- 기본 자료형의 속성 또는 메소드를 사용할 때 기본 자료형이 자동으로 객체로 변환이 됨
