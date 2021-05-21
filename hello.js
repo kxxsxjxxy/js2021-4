@@ -11,3 +11,6 @@ if(date.getHours() < 12) {
     console.log("오전!");
 }
 console.log("오후!");
+
+...
+else if(4.2 <= score && score < 4.5)
